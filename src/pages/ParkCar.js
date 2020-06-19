@@ -19,7 +19,7 @@ const colors = [
 const schema = Yup.object({
     plate_no: Yup.string()
         .max(13, 'Invalid plate no.')
-        .matches(/^[a-zA-Z]{2}-[0-9]{2}-[a-zA-Z]{2}-[0-9]{4}$/, 'Invalid plate no. format')
+        .matches(/^[a-zA-Z]{2}-[0-9]{2}-[a-zA-Z]{2}-[0-9]{4}$/, 'Invalid plate no. format. Should be in format like KA-58-TW-0001')
         .required('Required!'),
     color: Yup.string()
         .required('Required!')
@@ -50,10 +50,10 @@ const ParkCar = () => {
                                 <h4 className="mt-5">Park a car</h4>
                                 <Field name="plate_no" type="text" component={Textbox} label="Plate no" maxLength="13"/>
                                 <Field name="color" type="text" component={Selectbox} label="Color" options={colors}/>
-                                <button type="submit" className="btn btn-primary">
+                                <button type="submit" className="btn btn-success">
                                     Save
                                 </button>
-                                <button type="button" onClick={() => history.replace('/list')}>
+                                <button type="button" className="btn btn-danger ml-4" onClick={() => history.replace('/list')}>
                                     Cancel
                                 </button>
                             </form>

@@ -38,7 +38,7 @@ const Main = () => {
                                 <h4 className="mt-5">Enter details</h4>
                                 <Field name="total_places" type="number" component={Textbox} label="Number of parking places" />
                                 <Field name="car_parked" type="number" component={Textbox} label="Number of cars parked"/>
-                                <button type="submit" className="btn btn-primary">
+                                <button type="submit" className="btn btn-success">
                                     Save
                                 </button>
                             </form>
